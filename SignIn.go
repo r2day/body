@@ -1,11 +1,13 @@
 package body
 
-// SignUpRequest Binding from JSON
-type SignUpRequest struct {
+// SimpleSignInRequest 快速登陆
+type SimpleSignInRequest struct {
 	// Phone 手机号
 	Phone string `form:"phone" json:"phone" xml:"phone"  binding:"required"`
 	// Password 密码
 	Password string `form:"password" json:"password" xml:"password" binding:"required"`
+	// Type 用户类型
+	Type string `form:"type" json:"type" xml:"type"`
 }
 
 // SignInRequest Binding from JSON
